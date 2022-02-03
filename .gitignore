@@ -138,6 +138,6 @@ env.txt
 .DS_Store
 
 # Rasa
-models/
+#models/
 results/
 .rasa/
