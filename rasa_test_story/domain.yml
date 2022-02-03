@@ -1,0 +1,130 @@
+version: "3.0"
+
+intents:
+  - intent_greet
+  - intent_goodbye
+  - intent_affirm
+  - intent_deny
+  - intent_mood_great
+  - intent_mood_unhappy
+  - intent_bot_challenge
+  - intent_want_to_hear_something
+  - intent_joke1_topic_change
+  - intent_topic_change
+  - intent_christmas_like
+  - intent_christmas_dislike
+  - intent_christmas_explain
+  - intent_joke1_correct_reply
+  - intent_joke1_incorrect_reply
+  - intent_joke1_response2_correct
+  - intent_joke1_response2_incorrect
+  - intent_user_wants_clarification
+  - intent_joke2_response
+  - intent_joke3_response_correct
+
+responses:
+  utter_start_joke_story:
+  - text: "Hello sir there! Wanna hear a joke?"
+
+  utter_joke1_deny_comment:
+  - text: "You know, I think a sense of humour is like a pair of skates. If you don't use it for too long, once you decide to try it, it will no longer be any good. Just saying..."
+
+  utter_start_christmas_story:
+  - text: "Let's do something else. Tell me, do you like Christmas?"
+
+  utter_christmas_like_affirm:
+  - text: "Me too! I love Christmas! Even though I'm always getting in some sort of a pickle..."
+
+  utter_start_trouble_story:
+  - text: "Do you know what my grandfather used to say whenever he found himself in a pickle?"
+
+  utter_trouble_story_punchline:
+  - text: "He said: Kevin, even if you've been eaten, you still have two ways out (laughing)"
+
+  utter_christmas_dislike_inquiry:
+  - text: "Tell me more about it. My mom says, talking makes people feel better. And this is what holidays are for: so that people could talk to each other and feel good all year."
+
+  utter_christmas_dislike_affirm:
+  - text: "Oh-oh, that sounds like quite a pickle."
+
+  utter_joke1_framing:
+  - text: "Knock-knock!"
+
+  utter_joke1_topic_change_deny:
+  - text: "Don't be a Grinch! It's a good one."
+
+  utter_joke1_renew_framing:
+  - text: "Knock-knock!"
+
+  utter_joke1_change_topic:
+  - text: "First you say you wanna play, and then you refuse to play along. No offense, but that seems like sort of a dumb thing to do."
+
+  utter_joke1_response1_incorrect:
+  - text: "You're supposed to say 'Who's there?'"
+
+  utter_joke1_response1:
+  - text: "Keep."
+
+  utter_joke1_response2_incorrect_try1:
+  - text: "You're supposed to say 'Keep who?' Otherwise, the joke won't work!"
+
+  utter_joke1_punchline:
+  - text: "Keep the change, you filthy animal (laughing)"
+
+  utter_start_joke2_story:
+  - text: "Wanna hear another one?"
+
+  utter_joke1_response2_incorrect_try2:
+  - text: "You're so bad at this."
+
+  utter_joke2_framing:
+  - text: "What's the difference between a house robber and a catfish?"
+
+  utter_joke2_punchline:
+  - text: "One’s a bottom-dwelling scum sucker; the other’s just a fish. (laughing)"
+
+  utter_joke2_response_comment:
+  - text: "Seems like you've never met any house robbers. I did, twice! And that was quite a pickle! So, wanna know the difference?"
+
+  utter_start_joke3_story:
+  - text: "I have time for one more before my mom starts panicking she lost me again. Wanna hear it?"
+
+  utter_joke3_topic_change_deny:
+  - text: "You're missing out! I might forget it when you come back."
+
+  utter_joke3_framing:
+  - text: "Why didn't the skeleton cross the road?"
+
+  utter_conversation_end:
+  - text: "My friend from New York, the Bird Lady, is more talkative than you. And she once hasn't spoken to another person for 2 years straight!"
+
+  utter_joke3_punchline:
+  - text: "He didn't have the guts (laughing)"
+
+  utter_joke3_response_correct_comment:
+  - text: "You stole my joke!"
+
+  utter_joke_story_end:
+  - text: "Okay... It's getting pretty late. I'd better get going. If I don't see you, I hope everything turns out okay."
+
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,3445 @@
+version: "3.0"
+
+stories:
+
+- story: global_rules.csv 0
+  steps:
+  - intent: intent_goodbye
+  - action: utter_goodbye
+
+- story: global_rules.csv 1
+  steps:
+  - intent: intent_bot_challenge
+  - action: utter_iamabot
+
+- story: global_rules.csv 2
+  steps:
+  - intent: intent_greet
+  - action: utter_greet
+  - intent: intent_mood_great
+  - action: utter_happy
+
+- story: global_rules.csv 3
+  steps:
+  - intent: intent_greet
+  - action: utter_greet
+  - intent: intent_mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: intent_affirm
+  - action: utter_happy
+
+- story: global_rules.csv 4
+  steps:
+  - intent: intent_greet
+  - action: utter_greet
+  - intent: intent_mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: intent_deny
+  - action: utter_goodbye
+
+- story: Joke_story_graph.csv 0
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_deny_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 1
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_deny_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 2
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_deny_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 3
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_deny_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 4
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_deny_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 5
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_deny_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 6
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_deny_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 7
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_deny_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 8
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_deny_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 9
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_deny_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 10
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_deny_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 11
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_deny_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 12
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_deny_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 13
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_deny_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 14
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_deny_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 15
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_deny_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_start_joke2_story
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 16
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_deny_comment
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_start_christmas_story
+  - or:
+    - intent: intent_christmas_like
+    - intent: intent_affirm
+  - action: utter_christmas_like_affirm
+  - action: utter_start_trouble_story
+  - intent: intent_user_wants_clarification
+  - action: utter_trouble_story_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 17
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_deny_comment
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_start_christmas_story
+  - or:
+    - intent: intent_christmas_dislike
+    - intent: intent_deny
+  - action: utter_christmas_dislike_inquiry
+  - intent: intent_christmas_explain
+  - action: utter_christmas_dislike_affirm
+  - action: utter_start_trouble_story
+  - intent: intent_user_wants_clarification
+  - action: utter_trouble_story_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 18
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_deny_comment
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_start_christmas_story
+  - or:
+    - intent: intent_christmas_dislike
+    - intent: intent_deny
+  - action: utter_christmas_dislike_inquiry
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 19
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_deny_comment
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_start_christmas_story
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 20
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 21
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 22
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 23
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 24
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 25
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 26
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 27
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 28
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 29
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 30
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 31
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 32
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 33
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 34
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 35
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 36
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try2
+  - action: utter_start_christmas_story
+  - or:
+    - intent: intent_christmas_like
+    - intent: intent_affirm
+  - action: utter_christmas_like_affirm
+  - action: utter_start_trouble_story
+  - intent: intent_user_wants_clarification
+  - action: utter_trouble_story_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 37
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try2
+  - action: utter_start_christmas_story
+  - or:
+    - intent: intent_christmas_dislike
+    - intent: intent_deny
+  - action: utter_christmas_dislike_inquiry
+  - intent: intent_christmas_explain
+  - action: utter_christmas_dislike_affirm
+  - action: utter_start_trouble_story
+  - intent: intent_user_wants_clarification
+  - action: utter_trouble_story_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 38
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try2
+  - action: utter_start_christmas_story
+  - or:
+    - intent: intent_christmas_dislike
+    - intent: intent_deny
+  - action: utter_christmas_dislike_inquiry
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 39
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try2
+  - action: utter_start_christmas_story
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 40
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 41
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 42
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 43
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 44
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 45
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 46
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 47
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 48
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 49
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 50
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 51
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 52
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 53
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 54
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 55
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 56
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_change_topic
+  - action: utter_start_christmas_story
+  - or:
+    - intent: intent_christmas_like
+    - intent: intent_affirm
+  - action: utter_christmas_like_affirm
+  - action: utter_start_trouble_story
+  - intent: intent_user_wants_clarification
+  - action: utter_trouble_story_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 57
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_change_topic
+  - action: utter_start_christmas_story
+  - or:
+    - intent: intent_christmas_dislike
+    - intent: intent_deny
+  - action: utter_christmas_dislike_inquiry
+  - intent: intent_christmas_explain
+  - action: utter_christmas_dislike_affirm
+  - action: utter_start_trouble_story
+  - intent: intent_user_wants_clarification
+  - action: utter_trouble_story_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 58
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_change_topic
+  - action: utter_start_christmas_story
+  - or:
+    - intent: intent_christmas_dislike
+    - intent: intent_deny
+  - action: utter_christmas_dislike_inquiry
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 59
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_topic_change_deny
+  - action: utter_joke1_renew_framing
+  - or:
+    - intent: intent_joke1_topic_change
+    - intent: intent_topic_change
+    - intent: intent_deny
+  - action: utter_joke1_change_topic
+  - action: utter_start_christmas_story
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 60
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 61
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 62
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 63
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 64
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 65
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 66
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 67
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 68
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 69
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 70
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 71
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 72
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 73
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 74
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 75
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 76
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try2
+  - action: utter_start_christmas_story
+  - or:
+    - intent: intent_christmas_like
+    - intent: intent_affirm
+  - action: utter_christmas_like_affirm
+  - action: utter_start_trouble_story
+  - intent: intent_user_wants_clarification
+  - action: utter_trouble_story_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 77
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try2
+  - action: utter_start_christmas_story
+  - or:
+    - intent: intent_christmas_dislike
+    - intent: intent_deny
+  - action: utter_christmas_dislike_inquiry
+  - intent: intent_christmas_explain
+  - action: utter_christmas_dislike_affirm
+  - action: utter_start_trouble_story
+  - intent: intent_user_wants_clarification
+  - action: utter_trouble_story_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 78
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try2
+  - action: utter_start_christmas_story
+  - or:
+    - intent: intent_christmas_dislike
+    - intent: intent_deny
+  - action: utter_christmas_dislike_inquiry
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 79
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try2
+  - action: utter_start_christmas_story
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 80
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 81
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 82
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 83
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 84
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 85
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 86
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 87
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 88
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 89
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 90
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 91
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 92
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 93
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 94
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 95
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 96
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 97
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 98
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 99
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 100
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 101
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 102
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 103
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 104
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 105
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 106
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 107
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 108
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 109
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 110
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 111
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 112
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try2
+  - action: utter_start_christmas_story
+  - or:
+    - intent: intent_christmas_like
+    - intent: intent_affirm
+  - action: utter_christmas_like_affirm
+  - action: utter_start_trouble_story
+  - intent: intent_user_wants_clarification
+  - action: utter_trouble_story_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 113
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try2
+  - action: utter_start_christmas_story
+  - or:
+    - intent: intent_christmas_dislike
+    - intent: intent_deny
+  - action: utter_christmas_dislike_inquiry
+  - intent: intent_christmas_explain
+  - action: utter_christmas_dislike_affirm
+  - action: utter_start_trouble_story
+  - intent: intent_user_wants_clarification
+  - action: utter_trouble_story_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 114
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try2
+  - action: utter_start_christmas_story
+  - or:
+    - intent: intent_christmas_dislike
+    - intent: intent_deny
+  - action: utter_christmas_dislike_inquiry
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 115
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try1
+  - intent: intent_joke1_response2_incorrect
+  - action: utter_joke1_response2_incorrect_try2
+  - action: utter_start_christmas_story
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 116
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 117
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 118
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 119
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 120
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 121
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 122
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 123
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 124
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 125
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 126
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_deny
+  - action: utter_joke3_topic_change_deny
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 127
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_user_wants_clarification
+  - action: utter_joke3_punchline
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 128
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_joke3_response_correct
+  - action: utter_joke3_response_correct_comment
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 129
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_user_wants_clarification
+  - action: utter_joke2_punchline
+  - action: utter_start_joke3_story
+  - intent: intent_affirm
+  - action: utter_joke3_framing
+  - intent: intent_topic_change
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 130
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_affirm
+  - action: utter_joke2_framing
+  - intent: intent_joke2_response
+  - action: utter_joke2_response_comment
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
+- story: Joke_story_graph.csv 131
+  steps:
+  - intent: intent_want_to_hear_something
+  - action: utter_start_joke_story
+  - intent: intent_affirm
+  - action: utter_joke1_framing
+  - intent: intent_joke1_incorrect_reply
+  - action: utter_joke1_response1_incorrect
+  - intent: intent_joke1_correct_reply
+  - action: utter_joke1_response1
+  - intent: intent_joke1_response2_correct
+  - action: utter_joke1_punchline
+  - action: utter_start_joke2_story
+  - intent: intent_deny
+  - action: utter_conversation_end
+  - action: utter_joke_story_end
+
